@@ -5,6 +5,7 @@ on:
     branches:
       - develop
       - master
+      - test/actions
   push:
     branches:
       - develop
