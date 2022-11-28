@@ -9,6 +9,7 @@ on:
     branches:
       - develop
       - master
+      - test/actions
 
 jobs:
   build:
@@ -63,6 +64,11 @@ jobs:
           CXX: ${{matrix.cxx}}
         run: |
           cmake --preset ci ${{github.workspace}} -D DREAM3D_DATA_DIR=${{github.workspace}}/DREAM3D_Data -D VCPKG_TARGET_TRIPLET:STRING=x64-linux-dynamic
+        continue-on-error: true
+      - name: Print error
+        shell: bash
+        run: >
+          cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-err.log
       - name: Build
         run: |
           cmake --build --preset ci
