@@ -69,7 +69,7 @@ jobs:
       - name: Print error
         shell: bash
         run: >
-          ll /usr/local/share/vcpkg/buildtrees/boost-mp11
+          ls /usr/local/share/vcpkg/buildtrees/boost-mp11
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-err.log
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-out.log
       - name: Build
