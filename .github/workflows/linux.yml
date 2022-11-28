@@ -69,18 +69,20 @@ jobs:
       - name: Print error
         shell: bash
         run: |
-          echo "/usr/local/share/vcpkg/buildtrees/boost-mp11:\n"
+          printf "/usr/local/share/vcpkg/buildtrees/boost-mp11:\n"
           ls /usr/local/share/vcpkg/buildtrees/boost-mp11
-          echo "install-x64-linux-dynamic-dbg-err.log:\n"
+          printf "install-x64-linux-dynamic-dbg-err.log:\n"
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-err.log
-          echo "install-x64-linux-dynamic-dbg-out.log:\n"
+          printf "install-x64-linux-dynamic-dbg-out.log:\n"
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-out.log
-          echo "config-x64-linux-dynamic-dbg-err.log:\n"
+          printf "config-x64-linux-dynamic-dbg-err.log:\n"
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/config-x64-linux-dynamic-dbg-err.log
-          echo "config-x64-linux-dynamic-dbg-out.log:\n"
+          printf "config-x64-linux-dynamic-dbg-out.log:\n"
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/config-x64-linux-dynamic-dbg-out.log
-          echo "stdout-x64-linux-dynamic.log:\n"
+          printf "stdout-x64-linux-dynamic.log:\n"
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/stdout-x64-linux-dynamic.log
+          printf "include:\n"
+          ls /usr/local/share/vcpkg/buildtrees/boost-mp11/x64-linux-dynamic-dbg/_deps/boostorg_cmake-src/include
       - name: Build
         run: |
           cmake --build --preset ci
