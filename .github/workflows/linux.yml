@@ -82,7 +82,7 @@ jobs:
           printf "stdout-x64-linux-dynamic.log:\n"
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/stdout-x64-linux-dynamic.log
           printf "include:\n"
-          ls /usr/local/share/vcpkg/buildtrees/boost-mp11/x64-linux-dynamic-dbg/_deps
+          ls /usr/local/share/vcpkg/buildtrees/boost-mp11/x64-linux-dynamic-dbg
       - name: Build
         run: |
           cmake --build --preset ci
