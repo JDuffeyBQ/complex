@@ -69,9 +69,14 @@ jobs:
       - name: Print error
         shell: bash
         run: |
+          echo "/usr/local/share/vcpkg/buildtrees/boost-mp11:"
           ls /usr/local/share/vcpkg/buildtrees/boost-mp11
+          echo "install-x64-linux-dynamic-dbg-err.log:"
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-err.log
+          echo "install-x64-linux-dynamic-dbg-out.log:"
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-out.log
+          echo "stdout-x64-linux-dynamic.log:"
+          cat /usr/local/share/vcpkg/buildtrees/boost-mp11/stdout-x64-linux-dynamic.log
       - name: Build
         run: |
           cmake --build --preset ci
