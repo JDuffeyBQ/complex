@@ -68,7 +68,7 @@ jobs:
         continue-on-error: true
       - name: Print error
         shell: bash
-        run: >
+        run: |
           ls /usr/local/share/vcpkg/buildtrees/boost-mp11
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-err.log
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-out.log
