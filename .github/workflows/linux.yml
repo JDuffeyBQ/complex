@@ -70,6 +70,7 @@ jobs:
         shell: bash
         run: >
           cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-err.log
+          cat /usr/local/share/vcpkg/buildtrees/boost-mp11/install-x64-linux-dynamic-dbg-out.log
       - name: Build
         run: |
           cmake --build --preset ci
